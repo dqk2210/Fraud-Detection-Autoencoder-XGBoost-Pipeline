@@ -1,0 +1,37 @@
+# ──────────────────────────────────────────────
+# paths.yaml — All directory and file paths
+# No hardcoded paths in src/ — everything goes here.
+# ──────────────────────────────────────────────
+
+data:
+  raw_dir: "data/raw"
+  raw_csv: "data/raw/bs140513_032310.csv"
+  raw_net_csv: "data/raw/bsNET140513_032310.csv"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  external_dir: "data/external"
+
+reports:
+  base_dir: "reports"
+  figures_dir: "reports/figures"
+  metrics_dir: "reports/metrics"
+  comparisons_dir: "reports/comparisons"
+  fraud_report: "reports/fraud_report.html"
+
+logs:
+  base_dir: "logs"
+  autoencoder: "logs/autoencoder_train.log"
+  xgboost: "logs/xgboost_train.log"
+  random_forest: "logs/random_forest_train.log"
+  errors: "logs/errors.log"
+  run_summary: "logs/run_summary.log"
+
+models_saved:
+  base_dir: "models_saved"
+  checkpoints_dir: "models_saved/checkpoints"
+  autoencoder: "models_saved/autoencoder_best.h5"
+  xgboost: "models_saved/xgboost_v1.pkl"
+  random_forest: "models_saved/random_forest_v1.pkl"
+
+notebooks:
+  dir: "notebooks"

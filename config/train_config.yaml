@@ -1,0 +1,33 @@
+# ──────────────────────────────────────────────
+# train_config.yaml — Training settings
+# ──────────────────────────────────────────────
+
+# --- Global ---
+random_seed: 42
+
+# --- Autoencoder Training ---
+autoencoder:
+  epochs: 100
+  batch_size: 256
+  learning_rate: 0.001
+  validation_split: 0.1
+  early_stopping_patience: 10
+  reduce_lr_patience: 5
+  reduce_lr_factor: 0.5
+  reduce_lr_min: 0.000001
+  checkpoint_every_n_epochs: 10   # Save checkpoint every N epochs
+
+# --- XGBoost Training ---
+xgboost:
+  # XGBoost is configured via model_config.yaml (n_estimators = epochs equivalent)
+  verbose: true
+
+# --- Random Forest Training ---
+random_forest:
+  # RF is configured via model_config.yaml
+  verbose: 1
+
+# --- SMOTE ---
+smote:
+  random_state: 42
+  sampling_strategy: "auto"   # 'auto' = resample minority to match majority
